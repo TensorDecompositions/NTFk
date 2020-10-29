@@ -1,4 +1,4 @@
-if haskey(ENV, "NTFk_NO_PYTHON")
+if haskey(ENV, "NTFk_NO_PYTHON") || get(ENV, "JULIA_PKGEVAL", "false") == "true"
 	@info("No Python will be used ...")
 else
 	import PyCall
